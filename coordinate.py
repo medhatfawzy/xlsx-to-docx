@@ -1,9 +1,10 @@
-numbers = ( x for x in range(1, 200))
+numbers = ( x for x in range(1, 500))
 
 
 def coordination(codes:tuple) -> str:
     string = []
-    for i, num in enumerate(codes):
-        string.append(str(num).zfill(i+2))
-    string.append(str(next(numbers)).zfill(4))
+    for num in codes:
+        string.append(str(num).zfill(2))
+        
+    string.append(str(next(numbers)).zfill(3))
     return "-".join(string)

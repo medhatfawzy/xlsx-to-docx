@@ -8,4 +8,4 @@ def load_excel_file(path):
     data["coordinate"] = data[CODE_COLUMNS].apply(coordination, axis=1)
     data.drop(CODE_COLUMNS, inplace=True, axis=1)
     return data.values
-
+    
