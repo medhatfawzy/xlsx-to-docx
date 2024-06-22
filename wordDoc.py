@@ -11,8 +11,9 @@ from load_excel_file import load_excel_file
 data = load_excel_file("record.xlsx")
 
 def prevent_document_break(document):
-    """https://github.com/python-openxml/python-docx/issues/245#event-621236139
-        Globally prevent table cells from splitting across pages.
+    """
+    https://github.com/python-openxml/python-docx/issues/245#event-621236139
+    Globally prevent table cells from splitting across pages.
     """
     tags = document.element.xpath('//w:tr')
     rows = len(tags)
